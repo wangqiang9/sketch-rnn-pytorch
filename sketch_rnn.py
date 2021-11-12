@@ -273,8 +273,8 @@ class Model():
         # gradient step
         loss.backward()
         # gradient cliping
-        nn.utils.clip_grad_norm(self.encoder.parameters(), hp.grad_clip)
-        nn.utils.clip_grad_norm(self.decoder.parameters(), hp.grad_clip)
+        nn.utils.clip_grad_norm_(self.encoder.parameters(), hp.grad_clip)
+        nn.utils.clip_grad_norm_(self.decoder.parameters(), hp.grad_clip)
         # optim step
         self.encoder_optimizer.step()
         self.decoder_optimizer.step()
