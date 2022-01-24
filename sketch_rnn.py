@@ -22,7 +22,7 @@ class HParams():
         self.dec_hidden_size = 512
         self.Nz = 128
         self.M = 20
-        self.dropout = 0.9
+        self.dropout = 0.1
         self.batch_size = 100
         self.eta_min = 0.01
         self.R = 0.99995
